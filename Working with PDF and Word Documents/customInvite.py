@@ -13,7 +13,7 @@ with open('guests.txt') as guests:
         p.alignment = 1
         p.style.font.size = Pt(16)
         p = doc.add_paragraph()
-        p.add_run(guest_name).italic = True
+        p.add_run(guest_name.rstrip('\n')).italic = True
         p.alignment = 1
         p = doc.add_paragraph()
         p.add_run('at 11010 Memory Lane on the Evening of').italic = True
