@@ -8,8 +8,11 @@ import pandas as pd
 print('Press ENTER to begin. Then type name to record entry time. Press CTRL-C to quit.')
 df = pd.DataFrame(columns=['Name','Entry Time'])
 try:
-    input() # press ENTER to begin
-    print('Started')
+    if input() == '': # press ENTER to begin
+        print('Started')
+    else:
+        print('You did not press ENTER. Terminating Program')
+        sys.exit()
 except KeyboardInterrupt:
     print('Timesheet not started')
     sys.exit()
