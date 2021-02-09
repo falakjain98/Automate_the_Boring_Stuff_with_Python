@@ -13,7 +13,7 @@ datePattern = re.compile(r"""^(.*?)  #all text before date
     """,re.VERBOSE)
 
 # TODO: Loop over the files in the working directory
-path = 'D:\Falak\Learning\Online Courses\Automate_the_Boring_Stuff_With_Python_Textbook\\automate_online-materials'
+path = 'your_path'
 for amerFilename in os.listdir(path):
     mo = datePattern.search(amerFilename)
     # TODO: Skip files without a date
